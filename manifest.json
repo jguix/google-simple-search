@@ -1,0 +1,25 @@
+{
+  "name": "Google Simple Search",
+  "description": "Removes sugar from Google Search results letting you focus on the important content",
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/search*"],
+      "css": ["search-results.css"]
+    },
+    {
+      "matches": ["https://www.google.com/search*tbm=vid*"],
+      "css": ["search-results.css", "video-results.css"]
+    }
+  ],
+  "page_action": {
+    "default_title": "Google Simple Search"
+  },
+  "icons": {
+    "16": "images/simple-search-icon-16.png",
+    "32": "images/simple-search-icon-32.png",
+    "48": "images/simple-search-icon-48.png",
+    "128": "images/simple-search-icon-128.png"
+  }
+}
